@@ -1,0 +1,3 @@
+
+RewriteEngine On
+RewriteRule ^ReadAPI/(1*)$ ReadAPI.php?Id=1 [NC,L]

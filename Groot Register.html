@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <title>GROOT</title>
+        <style>
+            a{
+                text-decoration: none;
+            }
+            i:hover{
+                color: #ffa502 ;
+            }
+        </style>
+    </head>
+    <body style="background-image: linear-gradient(#1ECBE1,#E11ECB,#CBE11E); overflow-x: hidden;">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 col-sm-12 col-xs-12" style="background: black;" id="Card1" >
+                    <div class="Card-Body text-center">
+                        <h2 class="font-height-light" style="color: white;">
+                            Register
+                        </h2>
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <span style="color: blue; font-size: 35px;">
+                                <i class="fab fa-facebook"></i>
+                            </span>
+                        </a>
+                        <a href="https://www.whatsapp.com/" target="_blank">
+                            <span style="color: green; font-size: 35px;">
+                                <i class="fab fa-whatsapp"></i>
+                            </span>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank">
+                            <span style="color: blue; font-size: 35px;">
+                                <i class="fab fa-twitter"></i>
+                            </span>
+                        </a>
+                        <a href="https://in.pinterest.com/" target="_blank">
+                            <span style="color: rgb(53, 146, 223); font-size: 35px;">
+                                <i class="fab fa-pinterest"></i>                   
+                            </span>
+                        </a>
+                    <p style="color:white;">___________________or___________________</p>
+                        <div class="container">
+                                <div class="form-group row text-white my-1">
+                                    <label for="first_name" class="col-md-3 col-xs-3 col-form-label mr-2"> Id</label>
+                                    <div class="col-xs-9 col-md-9">
+                                        <select name="Id" id="Id" class="form-control" required>
+                                            <option value="1">1</option> 
+                                        </select>                                   
+                                    </div>
+                                </div>
+                                <div class="form-group row text-white ">
+                                    <label for="first_name" class="col-md-3 col-xs-3 col-form-label mt-1 mr-2"> Name</label>
+                                    <div class="col-xs-9 col-md-9">
+                                        <input type="text" class="form-control" id="Name" name="Name" maxlength="20" onkeyup="characteronly(this);">
+                                    </div>
+                                </div>
+                                <div class="form-group row text-white">
+                                    <label for="Father's_name" class="col-xs-3 col-md-3 col-form-label mr-2">Father's_Name</label>
+                                    <div class="col-xs-9 col-md-9">
+                                        <input type="text" class="form-control" id="Fathers_Name" name="Fathers_Name" maxlength="20" onkeyup="characteronly(this);">
+                                    </div>
+                                </div>
+                                <div class="form-group row  text-white">
+                                    <label for="last_name" class="col-xs-3 col-md-3 col-form-label mt-1 mr-2">DOB</label>
+                                    <div class="col-xs-9 col-md-9">
+                                            <input type="date" class="form-control mt-1" id="Date" name="Date"  />
+                                    </div>
+                                </div>
+                            
+                                <div class="form-group row  text-white">
+                                    <label for="E-mail" class="col-xs-3 col-md-3 col-form-label mt-1 mr-2">E-Mail</label>
+                                    <div class="col-xs-9 col-md-9 mt-1">
+                                        <input type="text" class="form-control" id="Email" name="Email" placeholder="E-Mail" onkeyup="ValidateEmail(this);">
+                                    </div>
+                                </div>
+                                <div class="form-group row text-white">
+                                    <label for="Contact" class="col-md-3 col-xs-3 col-form-label mt-1 mr-2"> Contact</label>
+                                    <div class="col-xs-9 col-md-9">
+                                    <div class="row">
+                                        <div class="col-md-3 col-xs-3 mt-1">
+                                            <select name="Num"  class="form-control"  required>
+                                                <option value="+91">+91</option>
+                                                <option value="+92">+92</option>
+                                                <option value="+93">+93</option>
+                                                <option value="+94">+94</option>
+                                                <option value="+95">+95</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-9 col-xs-9 mt-1">
+                                            <input class="form-control" name="Contact" id="Contact" type="text" placeholder="Contact" maxlength="10" onkeyup="numberonly(this);"/>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row text-white">
+                                    <label for="Contact" class="col-md-3 col-xs-3 col-form-label mt-1 mr-2">Parent_Contact</label>
+                                    <div class="col-xs-9 col-md-9">
+                                    <div class="row">
+                                        <div class="col-md-3 ">
+                                        <div class="col-xs-3 mt-1">
+                                            <select name="Number" id="Number" class="form-control"required>
+                                                <option value="+91">+91</option>
+                                                <option value="+92">+92</option>
+                                                <option value="+93">+93</option>
+                                                <option value="+94">+94</option>
+                                                <option value="+95">+95</option>
+                                            </select>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-9 col-xs-9 mt-1">
+                                            <input class="form-control" type="text" id="Parent_Number" name="Parent_Number" placeholder="Parent_Number" maxlength="10" onkeyup="numberonly(this);"/>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row  text-white my-1">
+                                    <label for="Address" class="col-xs-3 col-md-3 col-form-label mr-2">Address</label>
+                                    <div class="col-xs-9 col-md-9">
+                                        <input type="text" class="form-control" id="Address" name="Address">
+                                    </div>
+                                </div>
+                                <div class="form-group row text-white my-1">
+                                    <label for="Blood_Group" class="col-md-3 col-xs-3 col-form-label mr-2"> Blood_Group</label>
+                                    <div class="col-xs-9 col-md-9">
+                                            <select name="Blood_Group" id="Blood_Group" class="form-control" required>
+                                                <option value="O+">O+</option>
+                                                <option value="O-">O-</option>
+                                                <option value="A+">A+</option>
+                                                <option value="A-">A-</option>
+                                                <option value="B+">B+</option>
+                                                <option value="B-">B-</option>
+                                                <option value="AB+">AB+</option>
+                                            </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row text-white my-1">
+                                    <label for="School_Name" class="col-md-3 col-xs-3 col-form-label mr-2"> School_Name</label>
+                                    <div class="col-xs-9 col-md-9">
+                                        <input type="text" class="form-control" id="School_Name" name="School_Name" onkeyup="characteronly(this);">
+                                    </div>
+                                </div>
+                                <div class="form-group row text-white my-1">
+                                    <label for="SSLC_Mark" class="col-md-3 col-xs-3 col-form-label mr-2">College_Name</label>
+                                    <div class="col-xs-9 col-md-9">
+                                        <input type="text" class="form-control" id="College_Name" name="College_Name" maxlength="100" onkeyup="characteronly(this);">
+                                    </div>
+                                </div>
+                                <div class="form-group row  text-white">
+                                    <label for="Course" class="col-xs-3 col-md-3 col-form-label mr-2">Course</label>
+                                    <div class="col-xs-9 col-md-9">
+                                            <select name="Course" id="Course" class="form-control " required>
+                                                <option value="BE">BE</option>
+                                                <option value="B.TECH">B.TECH</option>
+                                            </select>
+                                        </div>                                      
+                                </div>
+                                <div class="form-group row text-white my-1 mb-2">
+                                    <label for="Quota" class="col-md-3 col-xs-3 col-form-label mr-2"> Quota</label>
+                                    <div class="col-xs-9 col-md-9">
+                                        <select name="Quota" id="Quota" class="form-control">
+                                            <option value="Managment">Managment</option>
+                                            <option value="Government">Government</option>
+                                            <option value="Sports">Sports</option>
+                                        </select>                                   
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                        <div class="offset col-xs-3 col-xs-9 mb-1">
+                                            <input type="button" id="submit" style="border-radius: 60px;" class=" form-control btn-sm my-2" value="Register" onsubmit="Register()";> 
+                                        </div>
+                                </div>
+                                <div class="col-md-12">
+                                <p style="color: white;">Already Have an Account?<a style="color:#ffa502 ;" href="login.html">Sign in</a></p>
+                                <span id="result"></span>
+                                </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/c26cd2166c.js"></script>
+    <script text="type/javascript" src="register.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+</html>
